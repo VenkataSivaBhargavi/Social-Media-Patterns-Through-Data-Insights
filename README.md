@@ -1,5 +1,4 @@
-# Social-Media-Patterns-Through-Data-Insights
-# 📊 Unravelling Social Media Patterns Through Data Insights
+# 📊 Social-Media-Patterns-Through-Data-Insights
 
 ## 📌 Project Overview
 
@@ -145,12 +144,6 @@ Model accuracy should be reported after executing the training and evaluation ce
 - Add more social media platforms.
 - Generate automated reports based on sentiment trends.
 
-## 👩‍💻 Author
-
-**Project:** Unravelling Social Media Patterns Through Data Insights
-
-**Domain:** Machine Learning, Deep Learning and Natural Language Processing (NLP)
-
-## ⭐ Conclusion
+## Conclusion
 
 This project demonstrates how Machine Learning, Deep Learning, and NLP techniques can be used to analyze social media data. It helps identify sentiment patterns, understand user engagement, discover topics, and extract meaningful insights from social media interactions.
