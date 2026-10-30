@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insights | Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="bg-video-wrapper">
+        <video autoplay muted loop playsinline class="bg-video-content">
+            <source src="{{ url_for('static', filename='bg_video.mp4') }}" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <div style="display: flex; min-height: 100vh; justify-content: center; align-items: center; padding: 40px; position: relative; z-index: 10;">
+        <div class="glass-panel" style="max-width: 800px; width: 100%;">
+            <h2 style="border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 15px; font-weight: 700;">
+                Intelligence Report
+            </h2>
+            
+            <p style="font-style: italic; color: #94a3b8; margin: 25px 0; background: rgba(0,0,0,0.2); padding: 15px; border-radius: 10px;">
+                "{{ message }}"
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px;">
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <small style="color: #818cf8; font-weight: 800; letter-spacing: 1px;">SENTIMENT</small><br>
+                    <strong style="font-size: 1.3rem; color: #10b981;">{{ res.sentiment }}</strong>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <small style="color: #818cf8; font-weight: 800; letter-spacing: 1px;">PLATFORM</small><br>
+                    <strong style="font-size: 1.3rem;">{{ res.platform }}</strong>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <small style="color: #818cf8; font-weight: 800; letter-spacing: 1px;">USER</small><br>
+                    <strong style="font-size: 1.3rem;">@{{ res.user }}</strong>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <small style="color: #818cf8; font-weight: 800; letter-spacing: 1px;">LIKES</small><br>
+                    <strong style="font-size: 1.3rem;">{{ res.likes }}</strong>
+                </div>
+                 <div style="background: rgba(255,255,255,0.03); padding: 20px; border-radius: 16px; border: 1px solid rgba(255,255,255,0.05);">
+                    <small style="color: #818cf8; font-weight: 800; letter-spacing: 1px;"><center>HASHTAGS</center></small><br>
+                    <strong style="font-size: 1.3rem;">{{ res.hashtag}}</strong>
+                </div>
+            </div>
+
+            <div style="margin-top: 40px;">
+                <a href="/input" class="btn-primary" style="display: inline-block; padding: 12px 35px; border: 1px solid #6366f1; border-radius: 50px; color: white; text-decoration: none; font-weight: 600; transition: 0.3s;">
+                    Analyze Another Post
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
